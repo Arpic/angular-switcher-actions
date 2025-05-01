@@ -4,7 +4,6 @@ import ch.namlin.angularswitchershortcuts.util.ExtensionSwitcher
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.actionSystem.CommonDataKeys.EDITOR
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
@@ -19,7 +18,7 @@ abstract class SwitchAction : AnAction() {
     }
 
     override fun actionPerformed(event: AnActionEvent) {
-        val editor: Editor? = event.getData(CommonDataKeys.EDITOR)
+        val editor: Editor? = event.getData(EDITOR)
         if (editor == null || event.project == null) return
         doSwitch(ExtensionSwitcher(event.project!!, editor))
     }
