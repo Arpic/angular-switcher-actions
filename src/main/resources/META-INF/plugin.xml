@@ -1,21 +1,19 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>ch.namlin.angular-switcher-shortcuts</id>
+    <id>ch.namlin.angular-switcher-actions</id>
 
-    <!-- Public plugin name should be written in Title Case.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Angular-switcher-shortcuts</name>
+    <name>Angular Switcher Actions</name>
 
-    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.yourcompany.com">YourCompany</vendor>
-
-    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    This plugin introduces actions for switching to commonly used file types in angular project:
+    <ul>
+        <li>Templates (html, svg)</li>
+        <li>Components (js, ts)</li>
+        <li>Tests (spec)</li>
+        <li>Style (css, scss, less, styl)</li>
+    </ul>
   ]]></description>
+    <vendor email="plugins.jetbrains@namlin.aleeas.com">Maxime Ameho</vendor>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -26,12 +24,26 @@
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
-    <actions>
+    <actions resource-bundle="messages.AGSActionsBundle">
         <action id="ch.namlin.angularswitchershortcuts.action.SwitchToTemplate"
-                class="ch.namlin.angularswitchershortcuts.action.SwitchToTemplate" text="Switch to template"
-                description="Switch to Angular template file (*.html)">
+                class="ch.namlin.angularswitchershortcuts.action.SwitchToTemplate">
             <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="H"/>
+        </action>
+        <action id="ch.namlin.angularswitchershortcuts.action.SwitchToComponent"
+                class="ch.namlin.angularswitchershortcuts.action.SwitchToComponent">
+            <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="C"/>
+        </action>
+        <action id="ch.namlin.angularswitchershortcuts.action.SwitchToStyle"
+                class="ch.namlin.angularswitchershortcuts.action.SwitchToStyle">
+            <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="S"/>
+        </action>
+        <action id="ch.namlin.angularswitchershortcuts.action.SwitchToTest"
+                class="ch.namlin.angularswitchershortcuts.action.SwitchToTest">
+            <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="T"/>
         </action>
     </actions>
 </idea-plugin>
