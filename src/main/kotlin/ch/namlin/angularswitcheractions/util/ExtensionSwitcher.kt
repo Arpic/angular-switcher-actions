@@ -30,7 +30,7 @@ class ExtensionSwitcher(private val project: Project, private val editor: Editor
         switchToGroup(testExtensions)
     }
 
-    fun switchToGroup(nextGroup: List<String>) {
+    private fun switchToGroup(nextGroup: List<String>) {
         val basePath = this.currentBasePath
         for (extension in nextGroup) {
             val file = findFileByPath("$basePath.$extension")
@@ -41,7 +41,7 @@ class ExtensionSwitcher(private val project: Project, private val editor: Editor
         }
     }
 
-    private val currentBasePath: String?
+    private val currentBasePath: String
         get() {
             var path = editor.virtualFile?.canonicalPath ?: throw BasePathNotFoundException()
             supportedExtensions.forEach { extension: String ->
