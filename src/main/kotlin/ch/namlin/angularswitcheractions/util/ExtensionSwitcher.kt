@@ -14,6 +14,12 @@ class ExtensionSwitcher(private val project: Project, private val editor: Editor
     private val styleExtensions = listOf("css", "scss", "less", "styl")
     private val supportedExtensions = testExtensions + templateExtensions + componentExtensions  + styleExtensions
 
+    fun isSupportedFile(): Boolean {
+        return editor.virtualFile?.name?.let {
+            supportedExtensions.any { extension: String -> it.endsWith(extension)}
+        } ?: false
+    }
+
     fun switchToTemplate() {
         switchToGroup(templateExtensions)
     }

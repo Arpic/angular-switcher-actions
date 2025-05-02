@@ -9,12 +9,12 @@ import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 
 
-abstract class SwitchAction : AnAction() {
+sealed class SwitchAction : AnAction() {
 
     override fun update(event: AnActionEvent) {
         val project: Project? = event.project
         val editor: Editor? = event.getData(EDITOR)
-        event.presentation.isEnabledAndVisible = (project != null && editor != null)
+        event.presentation.isEnabledAndVisible = (project != null && editor != null && ExtensionSwitcher(project, editor).isSupportedFile())
     }
 
     override fun actionPerformed(event: AnActionEvent) {
