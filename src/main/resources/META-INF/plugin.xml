@@ -25,23 +25,23 @@
 
     </extensions>
     <actions resource-bundle="messages.AGSActionsBundle">
-        <action id="ch.namlin.angularswitchershortcuts.action.SwitchToTemplate"
-                class="ch.namlin.angularswitchershortcuts.action.SwitchToTemplate">
+        <action id="ch.namlin.angularswitcheractions.action.SwitchToTemplate"
+                class="ch.namlin.angularswitcheractions.action.SwitchToTemplate">
             <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="H"/>
         </action>
-        <action id="ch.namlin.angularswitchershortcuts.action.SwitchToComponent"
-                class="ch.namlin.angularswitchershortcuts.action.SwitchToComponent">
+        <action id="ch.namlin.angularswitcheractions.action.SwitchToComponent"
+                class="ch.namlin.angularswitcheractions.action.SwitchToComponent">
             <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="C"/>
         </action>
-        <action id="ch.namlin.angularswitchershortcuts.action.SwitchToStyle"
-                class="ch.namlin.angularswitchershortcuts.action.SwitchToStyle">
+        <action id="ch.namlin.angularswitcheractions.action.SwitchToStyle"
+                class="ch.namlin.angularswitcheractions.action.SwitchToStyle">
             <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="S"/>
         </action>
-        <action id="ch.namlin.angularswitchershortcuts.action.SwitchToTest"
-                class="ch.namlin.angularswitchershortcuts.action.SwitchToTest">
+        <action id="ch.namlin.angularswitcheractions.action.SwitchToTest"
+                class="ch.namlin.angularswitcheractions.action.SwitchToTest">
             <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl I" second-keystroke="T"/>
         </action>

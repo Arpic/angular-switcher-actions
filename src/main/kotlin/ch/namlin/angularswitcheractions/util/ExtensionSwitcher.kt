@@ -1,4 +1,4 @@
-package ch.namlin.angularswitchershortcuts.util
+package ch.namlin.angularswitcheractions.util
 
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.fileEditor.OpenFileDescriptor

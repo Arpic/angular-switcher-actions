@@ -1,3 +1,3 @@
-package ch.namlin.angularswitchershortcuts.util
+package ch.namlin.angularswitcheractions.util
 
 class BasePathNotFoundException : RuntimeException()

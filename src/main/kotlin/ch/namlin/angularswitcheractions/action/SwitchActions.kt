@@ -1,6 +1,6 @@
-package ch.namlin.angularswitchershortcuts.action
+package ch.namlin.angularswitcheractions.action
 
-import ch.namlin.angularswitchershortcuts.util.ExtensionSwitcher
+import ch.namlin.angularswitcheractions.util.ExtensionSwitcher
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
